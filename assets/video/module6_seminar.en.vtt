@@ -1,0 +1,661 @@
+WEBVTT
+Kind: captions
+Language: en
+
+NOTE Module 6: Seminar narrated walkthrough. Generated from the
+narration script and per-segment audio durations (0.7 s gap per slide).
+
+s01-001
+00:00:00.000 --> 00:00:03.462
+Welcome to Module 6 of Claude Code
+for Accounting Research.
+
+s01-002
+00:00:03.512 --> 00:00:05.813
+This one is a seminar on AI,
+the production of knowledge,
+
+s01-003
+00:00:05.863 --> 00:00:09.096
+and the academic research market.
+
+s01-004
+00:00:09.146 --> 00:00:10.563
+There's no lab and nothing to install,
+
+s01-005
+00:00:10.613 --> 00:00:13.230
+so this video walks
+through the framing slides.
+
+s02-006
+00:00:13.980 --> 00:00:15.973
+So start with what you built.
+
+s02-007
+00:00:16.023 --> 00:00:21.730
+In Module 2 you built an R&amp;D
+intensity panel from the SEC's Financial
+
+s02-008
+00:00:21.780 --> 00:00:23.502
+Statement Data Sets,
+in an eighty-minute lab.
+
+s02-009
+00:00:23.552 --> 00:00:27.435
+Around 2019, that was about
+a week of an RA's time.
+
+s02-010
+00:00:27.485 --> 00:00:31.736
+Module 3, the EDGAR risk-factor
+pipeline and a reusable skill,
+
+s02-011
+00:00:31.786 --> 00:00:35.924
+was also an eighty-minute lab,
+against two to three weeks for an RA.
+
+s02-012
+00:00:35.974 --> 00:00:39.451
+Module 4, a filtered, verified Compustat
+pull, took the same eighty minutes,
+
+s02-013
+00:00:39.501 --> 00:00:42.714
+against several days.
+
+s02-014
+00:00:42.764 --> 00:00:46.313
+Module 5, a hardened repo with a paper
+trail and git, took about three hours,
+
+s02-015
+00:00:46.363 --> 00:00:49.762
+against days of audit work.
+
+s02-016
+00:00:49.812 --> 00:00:52.616
+That speed-up raises a
+question that isn't technical,
+
+s02-017
+00:00:52.666 --> 00:00:54.810
+and this module is about that question.
+
+s03-018
+00:00:55.560 --> 00:01:00.662
+In Module 1 you saw the research pipeline:
+idea, data, measure, analysis, paper.
+
+s03-019
+00:01:00.712 --> 00:01:02.181
+Here it's a harder map.
+
+s03-020
+00:01:02.231 --> 00:01:07.295
+Each stage is plotted by how automatable
+it is and how much of the paper's value
+
+s03-021
+00:01:07.345 --> 00:01:08.003
+it carries.
+
+s03-022
+00:01:08.053 --> 00:01:11.839
+Most of this course
+worked in the upper left,
+
+s03-023
+00:01:11.889 --> 00:01:16.016
+execution work an agent does
+faster than you and about as well.
+
+s03-024
+00:01:16.066 --> 00:01:19.338
+The upper right is identification,
+contribution, and interpretation,
+
+s03-025
+00:01:19.388 --> 00:01:22.467
+where a paper succeeds or fails.
+
+s03-026
+00:01:22.517 --> 00:01:23.395
+The line between the two moves.
+
+s03-027
+00:01:23.445 --> 00:01:27.553
+Measurement construction,
+which you worked on in Module 3,
+
+s03-028
+00:01:27.603 --> 00:01:30.520
+has been moving toward
+the automatable side.
+
+s03-029
+00:01:30.570 --> 00:01:34.319
+So, on your own, place your
+dissertation's stages on this map,
+
+s03-030
+00:01:34.369 --> 00:01:36.119
+and don't discuss it yet.
+
+s03-031
+00:01:36.169 --> 00:01:39.430
+Block 1 opens with two volunteers
+defending their placement.
+
+s04-032
+00:01:40.180 --> 00:01:42.095
+A paper is an artifact.
+
+s04-033
+00:01:42.145 --> 00:01:45.644
+Once it exists, it's
+transferable and cheap to copy.
+
+s04-034
+00:01:45.694 --> 00:01:50.356
+Your understanding is capital,
+and you only build it by doing the work.
+
+s04-035
+00:01:50.406 --> 00:01:52.953
+For most of the profession's
+history the two came bundled,
+
+s04-036
+00:01:53.003 --> 00:01:56.257
+so the paper was good
+evidence about the researcher.
+
+s04-037
+00:01:56.307 --> 00:01:58.824
+Agentic AI unbundles them.
+
+s04-038
+00:01:58.874 --> 00:02:01.213
+The evidence here isn't reassuring.
+
+s04-039
+00:02:01.263 --> 00:02:04.959
+Macnamara and coauthors argue that AI
+takes over the sub-tasks where expertise
+
+s04-040
+00:02:05.009 --> 00:02:09.839
+gets built, and that skills can
+decay without the person noticing.
+
+s04-041
+00:02:09.889 --> 00:02:13.947
+Gerlich's survey evidence finds that
+heavier AI use goes with weaker critical
+
+s04-042
+00:02:13.997 --> 00:02:14.513
+thinking,
+
+s04-043
+00:02:14.563 --> 00:02:19.415
+and that more educated people score
+higher regardless of how much they use AI.
+
+s04-044
+00:02:19.465 --> 00:02:22.394
+The personal audit is
+the test from Module 5:
+
+s04-045
+00:02:22.444 --> 00:02:25.010
+can you discuss the
+finding without the LLM?
+
+s05-046
+00:02:25.760 --> 00:02:29.567
+Block 2 is about provenance:
+who or what produced a result,
+
+s05-047
+00:02:29.617 --> 00:02:32.043
+and who's accountable for it.
+
+s05-048
+00:02:32.093 --> 00:02:36.405
+The quote on the slide is from
+a 1979 IBM training manual...
+
+s05-049
+00:02:36.455 --> 00:02:38.064
+a computer can never be held accountable.
+
+s05-050
+00:02:38.114 --> 00:02:40.679
+In 2023, Nature's editors set two rules.
+
+s05-051
+00:02:40.729 --> 00:02:42.787
+No language model gets
+credited as an author,
+
+s05-052
+00:02:42.837 --> 00:02:47.804
+because authorship carries
+accountability a model can't take on.
+
+s05-053
+00:02:47.854 --> 00:02:50.942
+And any use of these tools
+has to be documented.
+
+s05-054
+00:02:50.992 --> 00:02:56.639
+The second rule is where the profession
+is putting its practical effort now:
+
+s05-055
+00:02:56.689 --> 00:03:00.256
+disclosure policies, audit
+trails, and verification.
+
+s05-056
+00:03:00.306 --> 00:03:03.950
+You built that kind of documentation
+in Module 5, with the paper trail.
+
+s06-057
+00:03:04.700 --> 00:03:08.510
+This slide is a case study,
+and it's labeled that way on purpose.
+
+s06-058
+00:03:08.560 --> 00:03:11.425
+We don't cite this paper
+as evidence for anything.
+
+s06-059
+00:03:11.475 --> 00:03:16.161
+In 2024 a working paper claimed
+that a randomized rollout of an AI
+
+s06-060
+00:03:16.211 --> 00:03:20.568
+materials-discovery tool raised
+researcher output by 44%.
+
+s06-061
+00:03:20.618 --> 00:03:23.666
+It circulated to acclaim
+from prominent economists,
+
+s06-062
+00:03:23.716 --> 00:03:27.482
+and then MIT said it had no confidence
+in the provenance, reliability,
+
+s06-063
+00:03:27.532 --> 00:03:32.077
+or validity of the data, and asked
+for the paper to be withdrawn.
+
+s06-064
+00:03:32.127 --> 00:03:33.587
+The author is no longer at MIT.
+
+s06-065
+00:03:33.637 --> 00:03:39.819
+So the field's provenance-checking machinery
+failed before AI was writing papers.
+
+s06-066
+00:03:39.869 --> 00:03:43.445
+The open question for Block 2 is whether
+AI makes that machinery stronger,
+
+s06-067
+00:03:43.495 --> 00:03:48.021
+through audit trails and replication
+at near-zero cost, or weaker,
+
+s06-068
+00:03:48.071 --> 00:03:50.250
+through volume and plausibility at scale.
+
+s07-069
+00:03:51.000 --> 00:03:53.174
+Block 3 is about the market.
+
+s07-070
+00:03:53.224 --> 00:03:57.472
+Placement, tenure, prestige,
+and salary all clear through publications,
+
+s07-071
+00:03:57.522 --> 00:04:02.377
+so papers are the currency, and they've
+always been expensive to produce.
+
+s07-072
+00:04:02.427 --> 00:04:05.389
+The pre-AI baseline was already strained.
+
+s07-073
+00:04:05.439 --> 00:04:07.617
+Bloom, Jones, Van Reenen and Webb, 2020,
+
+s07-074
+00:04:07.667 --> 00:04:11.723
+document that ideas are
+getting harder to find:
+
+s07-075
+00:04:11.773 --> 00:04:15.976
+research productivity has fallen
+even as research effort has grown.
+
+s07-076
+00:04:16.026 --> 00:04:17.169
+Lusher, Yang and Carrell, 2023,
+
+s07-077
+00:04:17.219 --> 00:04:21.912
+find that when more working papers come
+out in the same week, each one does worse,
+
+s07-078
+00:04:21.962 --> 00:04:25.141
+and not just the weak ones.
+
+s07-079
+00:04:25.191 --> 00:04:27.007
+The figure follows that logic.
+
+s07-080
+00:04:27.057 --> 00:04:29.945
+Production cost falls,
+paper volume goes up,
+
+s07-081
+00:04:29.995 --> 00:04:33.262
+and referee time and reader
+attention don't scale with it.
+
+s07-082
+00:04:33.312 --> 00:04:38.007
+So the market reprices what attention
+still depends on: taste in questions,
+
+s07-083
+00:04:38.057 --> 00:04:40.950
+data access, credibility,
+and accountability.
+
+s08-084
+00:04:41.700 --> 00:04:44.403
+Here's how the discussion
+runs in the live session.
+
+s08-085
+00:04:44.453 --> 00:04:48.887
+Three blocks of about thirty minutes each,
+with a five-minute stretch between them.
+
+s08-086
+00:04:48.937 --> 00:04:53.737
+Each block starts with two-minute position
+statements from the debaters assigned
+
+s08-087
+00:04:53.787 --> 00:04:57.354
+in Module 5, then open
+discussion, then I synthesize.
+
+s08-088
+00:04:57.404 --> 00:05:01.261
+Several of you will be defending
+positions you don't actually hold,
+
+s08-089
+00:05:01.311 --> 00:05:02.774
+and that's part of the exercise.
+
+s08-090
+00:05:02.824 --> 00:05:06.584
+The ground rule is no
+catastrophizing and no dismissing.
+
+s08-091
+00:05:06.634 --> 00:05:10.194
+If you raise a provocation,
+pair it with its counterargument.
+
+s08-092
+00:05:10.244 --> 00:05:12.770
+And the memo is due one
+week after the seminar.
+
+s09-093
+00:05:13.520 --> 00:05:17.206
+Block 1 asks: if AI produces the artifact,
+what happens to the learning?
+
+s09-094
+00:05:17.256 --> 00:05:23.235
+We start from the placement you just did,
+with two volunteers defending theirs.
+
+s09-095
+00:05:23.285 --> 00:05:28.022
+Then the question is which pipeline
+stages build intuition worth protecting.
+
+s09-096
+00:05:28.072 --> 00:05:30.186
+The accounting parallel is
+AI-assisted audit judgment.
+
+s09-097
+00:05:30.236 --> 00:05:31.650
+There's also the institutional version.
+
+s09-098
+00:05:31.700 --> 00:05:37.806
+If researchers no longer have to build
+the capital to produce the artifact,
+
+s09-099
+00:05:37.856 --> 00:05:39.823
+does the profession keep
+building it on purpose,
+
+s09-100
+00:05:39.873 --> 00:05:44.035
+the way we still teach proofs to
+students who'll never prove anything new?
+
+s09-101
+00:05:44.085 --> 00:05:48.508
+The block closes on this question:
+is PhD training a production process,
+
+s09-102
+00:05:48.558 --> 00:05:50.590
+or a transformation of the student?
+
+s10-103
+00:05:51.340 --> 00:05:55.966
+Block 2 asks whether it matters
+who or what produced a result.
+
+s10-104
+00:05:56.016 --> 00:05:59.868
+Take two identical extraction
+results from the Module 3 pipeline.
+
+s10-105
+00:05:59.918 --> 00:06:02.762
+An RA hand-coded one over three weeks.
+
+s10-106
+00:06:02.812 --> 00:06:06.033
+The other came from a Claude session
+with a full audit trail: cached inputs,
+
+s10-107
+00:06:06.083 --> 00:06:10.853
+a quality report, committed code,
+and a stratified human audit sample.
+
+s10-108
+00:06:10.903 --> 00:06:12.764
+Are they equivalent?
+
+s10-109
+00:06:12.814 --> 00:06:16.281
+A spotless audit trail can
+still deliver a wrong estimate.
+
+s10-110
+00:06:16.331 --> 00:06:17.395
+Module 5 had that example,
+
+s10-111
+00:06:17.445 --> 00:06:22.929
+where DECISIONS.md claimed a robustness
+check the commit history didn't contain.
+
+s10-112
+00:06:22.979 --> 00:06:27.460
+A ten-minute segment then asks what's
+being verified when a second model reviews
+
+s10-113
+00:06:27.510 --> 00:06:28.802
+the first model's code,
+
+s10-114
+00:06:28.852 --> 00:06:33.131
+since correlated training plausibly
+produces correlated blind spots.
+
+s10-115
+00:06:33.181 --> 00:06:37.210
+The block closes on the retraction
+question: stronger or weaker?
+
+s11-116
+00:06:37.960 --> 00:06:40.581
+Block 3 is returns to research.
+
+s11-117
+00:06:40.631 --> 00:06:43.963
+You built the Module 4 pipeline
+in an eighty-minute lab.
+
+s11-118
+00:06:44.013 --> 00:06:47.248
+Now suppose every
+accounting PhD student can.
+
+s11-119
+00:06:47.298 --> 00:06:51.561
+What does the JAR submission queue look
+like in five years? Who referees it?
+
+s11-120
+00:06:51.611 --> 00:06:54.632
+What happens to the signal
+value of a publication?
+
+s11-121
+00:06:54.682 --> 00:06:57.025
+The candidates for what stays
+scarce are question taste,
+
+s11-122
+00:06:57.075 --> 00:07:02.993
+data access and institutional knowledge,
+credibility, and accountability.
+
+s11-123
+00:07:03.043 --> 00:07:04.976
+Then there's homogenization.
+
+s11-124
+00:07:05.026 --> 00:07:07.674
+If everyone's referee reports
+pass through the same models,
+
+s11-125
+00:07:07.724 --> 00:07:10.483
+does voice still signal anything?
+
+s11-126
+00:07:10.533 --> 00:07:14.750
+The block closes with each of you
+naming one input you think stays scarce,
+
+s11-127
+00:07:14.800 --> 00:07:17.030
+and that answer is where your memo starts.
+
+s12-128
+00:07:17.780 --> 00:07:22.063
+The memo is titled What I will
+still be paid for in 2036.
+
+s12-129
+00:07:22.113 --> 00:07:24.906
+It's one page, due a
+week after the seminar.
+
+s12-130
+00:07:24.956 --> 00:07:28.719
+Commit to specific parts of the research
+production function that you think stay
+
+s12-131
+00:07:28.769 --> 00:07:29.638
+human.
+
+s12-132
+00:07:29.688 --> 00:07:33.941
+Defend that with at least one assigned
+reading and one experience from the build
+
+s12-133
+00:07:33.991 --> 00:07:34.427
+modules.
+
+s12-134
+00:07:34.477 --> 00:07:38.924
+And name one concrete investment you'll
+make in your remaining PhD years.
+
+s12-135
+00:07:38.974 --> 00:07:42.655
+Grading is credit or no credit
+on defended specificity.
+
+s12-136
+00:07:42.705 --> 00:07:47.272
+An optimist and a pessimist can both
+earn credit, and a vague memo can't.
+
+s12-137
+00:07:47.322 --> 00:07:51.184
+AI help is fine everywhere in this
+course except the argument of this memo,
+
+s12-138
+00:07:51.234 --> 00:07:55.571
+which has to be your own, and you
+disclose what you used in one line.
+
+s12-139
+00:07:55.621 --> 00:07:56.770
+See you at the seminar.
