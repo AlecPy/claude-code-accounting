@@ -23,7 +23,7 @@ That's it. One file changed, whole site updated — navigation, styling, and all
 | Navbar links, site title, footer text | `_quarto.yml` (one file controls the chrome on every page) |
 | Colors, fonts, buttons | `styles/custom.scss` |
 
-**Special case — skill pages.** The 41 pages under `skills/` are generated from your Barrios_Skills collection by a script. Don't edit them directly (a re-sync overwrites them); edit the source skill in `~/Documents/Barrios_Skills/skills/` and re-run the sync (or ask Claude).
+**Special case — skill pages.** The 40 pages under `skills/` are generated from your Barrios_Skills collection by a script. `web-scrape` is excluded on purpose (not public). Don't edit them directly (a re-sync overwrites them); edit the source skill in `~/Documents/Barrios_Skills/skills/` and re-run the sync (or ask Claude).
 
 **Figures and slides** are also generated: figures from `.tex` files in the course folder, slide PDFs from `slides.tex`. Ask Claude to change those — the text pages are the ones meant for your own hands.
 

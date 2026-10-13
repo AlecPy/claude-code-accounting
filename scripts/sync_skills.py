@@ -8,6 +8,8 @@ also works). For each skill:
   - Regenerate skills/index.qmd as a catalog grouped by category
 
 Categories listed in SKIP_CATEGORIES (e.g. "optional") are excluded.
+Skills listed in SKIP_SKILLS stay off the public site; a sync deletes any
+page or zip already published for those names.
 """
 
 from __future__ import annotations
@@ -23,6 +25,10 @@ DEFAULT_SITE_ROOT = Path(__file__).resolve().parent.parent
 
 # Category folders excluded from the course catalog.
 SKIP_CATEGORIES = {"optional"}
+
+# Skill folders that stay off the public course site even if they exist
+# in the private Barrios Skills collection.
+SKIP_SKILLS = {"web-scrape"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -91,6 +97,8 @@ def discover_skills(source: Path) -> list[tuple[str, Path]]:
     for entry in sorted(source.iterdir(), key=lambda p: p.name.lower()):
         if not entry.is_dir():
             continue
+        if entry.name.lower() in SKIP_SKILLS:
+            continue
         if (entry / "SKILL.md").is_file():
             found.append(("General", entry))
             continue
@@ -98,6 +106,8 @@ def discover_skills(source: Path) -> list[tuple[str, Path]]:
             continue
         group = category_to_group(entry.name)
         for sub in sorted(entry.iterdir(), key=lambda p: p.name.lower()):
+            if sub.name.lower() in SKIP_SKILLS:
+                continue
             if sub.is_dir() and (sub / "SKILL.md").is_file():
                 found.append((group, sub))
     return found
@@ -250,6 +260,16 @@ def sync_skills(source: Path, site_root: Path, dry_run: bool = False) -> int:
 
     skills_dir = site_root / "skills"
     assets_dir = site_root / "assets" / "skills"
+
+    for name in sorted(SKIP_SKILLS):
+        for path in (skills_dir / f"{name}.qmd", assets_dir / f"{name}.zip"):
+            if not path.exists():
+                continue
+            if dry_run:
+                print(f"  [dry-run] would remove non-public skill file {path}")
+            else:
+                path.unlink()
+                print(f"Removed non-public skill file: {path}")
 
     skill_entries: list[dict[str, str]] = []
     discovered = discover_skills(source)

@@ -14,7 +14,7 @@ listing:
   page-size: 60
 ---
 
-Agent skills for accounting research workflows — 41 skills, each with a download and a one-line install. Use the search box to filter, or the category list to browse by area. Click a card for the full skill documentation and its download.
+Agent skills for accounting research workflows — 40 skills, each with a download and a one-line install. Use the search box to filter, or the category list to browse by area. Click a card for the full skill documentation and its download.
 
 ::: {.callout-note icon=false}
 ## Snapshot

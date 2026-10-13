@@ -11,7 +11,7 @@ toc: false
 A hands-on PhD course on agentic AI for empirical accounting research, with five build modules and a closing seminar. It starts at first install and ends at a verified WRDS-to-Stata pipeline. The seminar then discusses what these tools mean for the profession.
 
 ::: {.hero-facts}
-6 modules · 5 labs · 41 skills · 1 verification protocol
+6 modules · 5 labs · 40 skills · 1 verification protocol
 :::
 
 ::: {.hero-buttons}
@@ -113,6 +113,6 @@ The course assumes no Claude Code experience. It does assume a laptop you contro
 
 ## Beyond the modules
 
-The [Skills catalog](skills/index.qmd) has 41 agent skills for accounting research, covering econometrics, data work, writing and review. Each has a download and a one-line install command. The [Tools guide](tools.qmd) compares Claude Code with Claude Desktop, Cursor, and Codex, and includes a decision table for choosing one for each task. The [Prompt gallery](prompts.qmd) collects every reusable prompt the course teaches. The [Verification protocol](verification.qmd) is the one-page checklist you practice in every module. [Resources](resources.qmd) lists other useful tools and readings, grouped by the module where each is most relevant.
+The [Skills catalog](skills/index.qmd) has 40 agent skills for accounting research, covering econometrics, data work, writing and review. Each has a download and a one-line install command. The [Tools guide](tools.qmd) compares Claude Code with Claude Desktop, Cursor, and Codex, and includes a decision table for choosing one for each task. The [Prompt gallery](prompts.qmd) collects every reusable prompt the course teaches. The [Verification protocol](verification.qmd) is the one-page checklist you practice in every module. [Resources](resources.qmd) lists other useful tools and readings, grouped by the module where each is most relevant.
 
 Taught by [John Barrios](about.qmd), Yale School of Management. Course materials draw on outside sources, which are credited on the [About](about.qmd) page. All student-facing content is original.
