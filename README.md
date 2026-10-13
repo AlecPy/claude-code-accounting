@@ -83,7 +83,7 @@ python3 scripts/sync_skills.py --source /path/to/skills --site-root .
 python3 scripts/sync_skills.py --dry-run
 ```
 
-Default source: `~/Documents/Barrios_Skills/skills`. The script converts each `SKILL.md` folder to `skills/<name>.qmd`, zips it to `assets/skills/<name>.zip`, and regenerates `skills/index.qmd`.
+Default source: `~/.claude/barrios-skills-repo/skills` (a local clone of `Barrios88/barrios-skills`). A full sync rewrites every skill page and zip from the current collection; for a one-skill fix, patch that page and zip only. The script converts each `SKILL.md` folder to `skills/<name>.qmd`, zips it to `assets/skills/<name>.zip`, and regenerates `skills/index.qmd`.
 
 Install a skill locally:
 

@@ -20,7 +20,8 @@ import sys
 import zipfile
 from pathlib import Path
 
-DEFAULT_SOURCE = Path("/Users/jmb432/Documents/Barrios_Skills/skills")
+# Local clone of github.com/Barrios88/barrios-skills.
+DEFAULT_SOURCE = Path.home() / ".claude" / "barrios-skills-repo" / "skills"
 DEFAULT_SITE_ROOT = Path(__file__).resolve().parent.parent
 
 # Category folders excluded from the course catalog.
