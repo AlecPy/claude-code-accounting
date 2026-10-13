@@ -20,7 +20,7 @@ title: "About & Attribution"
 
 **Figure and exhibit policy.** Figures on this site (the tool ladder, the empirical loop, the verification-debt 2×2, and the rest) are original diagrams drawn for this course. A small number of exhibits show what a Claude Code or Claude Desktop session looks like in practice, for example the Module 1 terminal-anatomy and permission-prompt exhibits. These are mock-ups of a typical interaction, not screenshots or transcripts of a real session. Each caption says so.
 
-**External links.** The links on the [Resources](resources.qmd) page point to real, existing projects. That includes the one item flagged as unvetted rather than recommended.
+**External links.** The links on the [Resources](resources.qmd) page point to real, existing projects.
 
 **No Yale trademarks.** This is a personal course site by a Yale faculty member, not an official Yale or Yale School of Management site.
 

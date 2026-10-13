@@ -4,7 +4,7 @@ title: "Resources"
 
 These are the outside tools, templates, and readings behind the course. It is the same vetted list the module outlines were built from, grouped by the module where each item is most relevant. Each item gets one line on when an accounting PhD would actually reach for it. Nothing here is required reading. These are pointers for after the course ends, when you're building your own pipeline rather than following the lab.
 
-One item is flagged rather than recommended. It is listed because it exists and people are talking about it, not because it has been vetted to the standard of everything else on this page. Agents that helped build this course were allowed to study any of these workflow templates for patterns, but never to copy prose from them. The same no-verbatim rule governs this course's use of its own primary source material (see [About](about.qmd)).
+Agents that helped build this course were allowed to study any of these workflow templates for patterns, but never to copy prose from them. The same no-verbatim rule governs this course's use of its own primary source material (see [About](about.qmd)).
 
 ## Module 1 — setup and mental models
 
@@ -22,7 +22,6 @@ These show what a mature setup looks like once you're past the basics. Borrow `C
 - **[chesun/claude-research-workflow](https://github.com/chesun/claude-research-workflow)** — an empirical social science template built around an explicit "epistemic stack" (no-assumptions, primary-source-first, derive-don't-guess, adversarial-default). Reach for this alongside the [Verification](verification.qmd) page. Its epistemic-stack framing pairs directly with this course's verification-debt lecture.
 - **[eweisbrod/example-project](https://eweisbrod.github.io/example-project/)** — Eric Weisbrod's reproducible-project template for accounting research (R, Python, SAS, and Stata), including a dedicated page on [meeting JAR's data-sharing policy](https://eweisbrod.github.io/example-project/pages/jar-data-policy.html): replication code, SAS-log-style execution logs, and exported sample identifiers with file hashes. Reach for this when a paper is headed to JAR, or any journal with a data policy, and you want to see [Module 5](modules/05-writing-verify.qmd)'s paper-trail discipline mapped onto an actual submission requirement.
 - **[benediktheid/clo-author](https://github.com/benediktheid/clo-author)** — a lit-review-to-submission pipeline with adversarial QA built in. Reach for this if you're scoping an end-to-end drafting pipeline for a full paper, not just one section.
-- **[izhiwen/AiEconLab](https://github.com/izhiwen/AiEconLab)** — a multi-role "virtual research team" (PI/RA/referee personas). **Watch, unvetted:** this is new and unproven (near-zero stars at time of writing). It is listed so you know it exists, not as a course-vetted recommendation.
 
 ## Module 3 — EDGAR / text-as-data
 

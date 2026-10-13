@@ -220,7 +220,7 @@ Between trusting the model and running it in a container sits a cheap middle lay
 
 Read it line by line. Claude's file tools can't open your `.env` or your SSH keys. Nothing can edit the raw data folder, which is where your downloaded EDGAR filings or the original FSDS extract belong; every cleaning step writes somewhere else. Recursive deletes are refused outright, and pushing to GitHub always stops for a human, whatever mode you're in. Deny rules are checked first, so no allow rule elsewhere can make an exception to them.
 
-Know the limits, which are the same ones the container section raised. These rules match Claude's built-in tools and the literal text of a shell command. `Bash(rm -rf *)` stops `rm -rf data/` but not `/bin/rm -rf data/` or the same command wrapped in `bash -c`. A `Read` deny stops Claude's file reader, but a shell `cat .env` reaches the same file another way. Permission rules take two minutes to write and are worth having, but they are not a sandbox. Only the operating system enforces a boundary that holds however the command is phrased.
+Know the limits, which are the same ones the container section raised. These rules match Claude's built-in tools and the literal text of a shell command. `Bash(rm -rf *)` stops `rm -rf data/` but not `/bin/rm -rf data/` or the same command wrapped in `bash -c`. A `Read` deny on `.env` also stops shell commands that name the file, such as `cat .env`, but `grep -r PASSWORD .` or a Python script that opens `.env` reaches the same file another way. Permission rules take two minutes to write and are worth having, but they are not a sandbox. Only the operating system enforces a boundary that holds however the command is phrased.
 
 ### Requests versus enforcement
 
@@ -245,7 +245,7 @@ A hook is the most flexible enforcer, because it's just a script. This one runs 
 # .claude/hooks/no-secrets.sh
 COMMAND=$(jq -r '.tool_input.command')
 if echo "$COMMAND" | grep -q "git commit"; then
-  if git diff --cached | grep -q "WRDS_PASSWORD"; then
+  if git diff --cached -- . ':!.claude/hooks' | grep -q "WRDS_PASSWORD"; then
     echo "Blocked: a staged file mentions WRDS_PASSWORD" >&2
     exit 2
   fi
@@ -283,10 +283,10 @@ git log --all --full-history -- .env
 This should return nothing. If it returns even one commit, a `.env` file was committed at some point. That is where WRDS credentials and API keys belong, so this matters. Deleting the file now does not remove it from history, and anyone who clones the repo can still find it in an old commit.
 
 ```bash
-grep -r "WRDS_PASSWORD" .
+git grep -n --untracked "WRDS_PASSWORD" -- . ':!.claude/hooks'
 ```
 
-This grep, and the equivalent one for any other credential name you use, should return zero results anywhere in the project: not in a script, not in a notebook, not in a stray text file. Before you trust a clean result, widen the search to the credential names that apply to your own project (API keys, other passwords).
+This search, and the equivalent one for any other credential name you use, should return zero results anywhere in the project: not in a script, not in a notebook, not in a stray text file. It covers every file git tracks plus new files git would pick up. It skips files your `.gitignore` excludes, because your `.env` is supposed to hold the password, and it skips the hook above, which names the variable on purpose. A plain `grep -r` would flag both and could never come back clean. Before you trust a clean result, widen the search to the credential names that apply to your own project (API keys, other passwords).
 
 ::: {.callout-tip icon=false}
 ## Verify this: run the audit, and know the fix if it fails

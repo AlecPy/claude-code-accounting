@@ -22,13 +22,13 @@ Specific:
 
 [Module 2](modules/02-empirical-loop.qmd) extends the four-component habit to a full pipeline by adding a join and a paper trail. Of everything in the module, this prompt is the one you are most likely to reuse. Keep it as a template for any measure you build from a two-table dataset.
 
-> **DATA:** Download the FSDS quarterly zip files for these fourteen quarters — Q4 of each year from 2010 through 2023 — from the SEC's Financial Statement Data Sets page. From each quarter we need two files: `sub.txt` (filing metadata: `adsh`, `cik`, `sic`, `form`, fiscal year end, period) and `num.txt` (tagged numeric values: `adsh`, `tag`, `ddate`, `qtrs`, `value`).
+> **DATA:** Download the FSDS quarterly zip files for these fourteen quarters — Q1 of each year from 2011 through 2024, which hold most 10-Ks for fiscal years 2010 through 2023 — from the SEC's Financial Statement Data Sets page. From each quarter we need two files: `sub.txt` (filing metadata: `adsh`, `cik`, `sic`, `form`, `fy` (fiscal year), period) and `num.txt` (tagged numeric values: `adsh`, `tag`, `ddate`, `qtrs`, `value`).
 >
 > **JOIN:** Merge `sub.txt` and `num.txt` on `adsh` — the filing's accession number, the only key that reliably links the two files. State the row count in each file before the join and the row count after, and flag any `adsh` values in `num.txt` with no match in `sub.txt`.
 >
 > **MEASURE:** R&D intensity, defined as R&D expense divided by total assets for each filer-period. Use the XBRL tag `ResearchAndDevelopmentExpense` for the numerator and `Assets` for the denominator. Keep `qtrs = 0` rows for `Assets` (a balance-sheet snapshot) and `qtrs = 4` rows for the R&D tag (a full fiscal year of a flow variable). Restrict to `form = 10-K`.
 >
-> **AGGREGATION:** Compute the median R&D-intensity ratio by two-digit SIC code (`sic2`, the first two digits of `sub.txt`'s `sic` column) and calendar year, across all fourteen quarters.
+> **AGGREGATION:** Compute the median R&D-intensity ratio by two-digit SIC code (`sic2`, the first two digits of `sub.txt`'s `sic` column) and fiscal year (`fy` in `sub.txt`), across all fourteen quarters.
 >
 > **OUTPUT:** One line figure, one line per SIC2 industry, R&D intensity on the y-axis and year on the x-axis, formatted for a working-paper draft — white background, labeled axes, a legend, no default plotting-library styling — saved as `rd_intensity.png`. Save the underlying aggregated table as `rd_intensity_by_sic2_year.csv`.
 >

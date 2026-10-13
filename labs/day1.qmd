@@ -34,7 +34,7 @@ Once it's saved, close the session and start a new one in the same folder. Ask C
 
 Choose one of the three tiers below. All three use the same public dataset, the SEC's Financial Statement Data Sets (FSDS). FSDS is a free quarterly bulk file of filing metadata and tagged financial values, and it needs no credentials. None of the tiers touch WRDS.
 
-**Base.** Download one quarter of FSDS, extract `sub.txt` (the filing metadata file), and count filings by form type (10-K, 10-Q, 8-K, and so on). Save the counts as `form_counts.csv`, produced by a named script, not pasted from a chat reply. For example, ask for `count_forms.py` by name so the file exists on disk and can be rerun.
+**Base.** Download one quarter of FSDS, extract `sub.txt` (the filing metadata file), and count filings by form type (10-K, 10-Q, 20-F, and so on). Save the counts as `form_counts.csv`, produced by a named script, not pasted from a chat reply. For example, ask for `count_forms.py` by name so the file exists on disk and can be rerun.
 
 **Standard.** Do everything in Base, plus a bar figure of the top ten form types by count, with both axes labeled, saved as `form_counts.png`.
 
@@ -49,7 +49,7 @@ Complete every line below before you consider the lab done. The checklist is sel
 
 - [ ] `claude` launches in a fresh terminal, and `CLAUDE.md` loads in a new session (you asked, and the answer matched what you wrote)
 - [ ] The task ran from a named script (e.g., `count_forms.py`), not from output pasted into the chat
-- [ ] At least one output number is checked against a source Claude did not touch. Write down what you checked and where. One reasonable check: compare your 10-K count for the quarter with SEC EDGAR's own filing search, filtered to the same form type and date range.
+- [ ] At least one output number is checked against a source Claude did not touch. Write down what you checked and where. One reasonable check: compare your 10-K count with EDGAR's quarterly index for the same quarter (`https://www.sec.gov/Archives/edgar/full-index/YYYY/QTRn/form.idx`) and explain the gap. FSDS includes only filings with XBRL financial statements, so EDGAR's count will be higher (for 2023 Q1, about 5,700 against about 4,650 in FSDS).
 - [ ] `prompts_tried.md` contains at least one real vague-to-specific prompt rewrite from your own session (not copied from the module page)
 - [ ] No credentials of any kind appear anywhere in `~/lab1/`. This lab uses only public data, so this box should be easy to tick. Check it anyway, to build the habit.
 :::
